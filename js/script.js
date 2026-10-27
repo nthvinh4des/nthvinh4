@@ -1,13 +1,14 @@
 (function () {
   "use strict";
 
-  // ===== i18n (Vietnamese source in the HTML, Chinese from js/i18n.js) =====
-  var ZH = window.I18N_ZH || {};
+  // ===== i18n (Vietnamese source in the HTML, Chinese from js/i18n.js, English from js/i18n-en.js) =====
+  var DICTS = { zh: window.I18N_ZH || {}, en: window.I18N_EN || {} };
+  var HTML_LANG = { vi: "vi", zh: "zh-CN", en: "en" };
   var lang = "vi";
   var norm = function (s) { return s.replace(/\s+/g, " ").trim(); };
   function t(vi) {
-    if (lang !== "zh") return vi;
-    var hit = ZH[norm(vi)];
+    if (lang === "vi") return vi;
+    var hit = DICTS[lang][norm(vi)];
     return hit === undefined ? vi : hit;
   }
 
@@ -33,19 +34,19 @@
   }
 
   function applyLang(next) {
-    lang = next === "zh" ? "zh" : "vi";
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "vi";
+    lang = DICTS[next] ? next : "vi";
+    document.documentElement.lang = HTML_LANG[lang];
     textEls.forEach(function (el) { el.innerHTML = t(el.dataset.vi); });
     imgs.forEach(function (img) { if (img.dataset.viAlt) img.alt = t(img.dataset.viAlt); });
     labelled.forEach(function (el) { el.setAttribute("aria-label", t(el.dataset.viLabel)); });
-    document.title = lang === "zh" ? (ZH.__title || vi.title) : vi.title;
-    metaDesc.content = lang === "zh" ? (ZH.__description || vi.desc) : vi.desc;
+    document.title = lang === "vi" ? vi.title : (DICTS[lang].__title || vi.title);
+    metaDesc.content = lang === "vi" ? vi.desc : (DICTS[lang].__description || vi.desc);
     langBtns.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
     labelShots();
     setNav(toggle.getAttribute("aria-expanded") === "true");
     try { localStorage.setItem("lang", lang); } catch (e) {}
     var url = new URL(location.href);
-    if (lang === "zh") url.searchParams.set("lang", "zh"); else url.searchParams.delete("lang");
+    if (lang === "vi") url.searchParams.delete("lang"); else url.searchParams.set("lang", lang);
     history.replaceState(null, "", url);
   }
 
@@ -74,7 +75,7 @@
   // Initial language: ?lang= wins, then saved choice
   var initial = new URLSearchParams(location.search).get("lang");
   if (!initial) { try { initial = localStorage.getItem("lang"); } catch (e) {} }
-  if (initial === "zh") applyLang("zh"); else labelShots();
+  if (initial && initial !== "vi" && DICTS[initial]) applyLang(initial); else labelShots();
 
   // ===== Lightbox: shows the full-resolution file already used by the tile =====
   var box = document.getElementById("lightbox");

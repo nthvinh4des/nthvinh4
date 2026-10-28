@@ -413,6 +413,8 @@ mark{
 .zalo-menu:popover-open{ display:flex; }
 .zalo-menu::backdrop{ background:rgba(20,20,20,.5); }
 .zalo-menu .btn{ justify-content:center; }
+.zalo-menu .zalo-qr{ width:min(100%, 220px); margin:0 auto; background:var(--white); border:var(--border); border-radius:10px; padding:6px; }
+.zalo-menu .zalo-hint{ margin:-4px 0 4px; padding:0; background:none; text-align:center; font-size:.9rem; font-weight:600; max-width:none; }
 .zalo-menu .zalo-title{ margin:0; padding:0; font-family:var(--display); font-weight:800; font-size:1.3rem; }
 
 /* ===== Mobile tuning ===== */

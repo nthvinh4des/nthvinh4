@@ -206,5 +206,7 @@ window.I18N_ZH = {
   "Sao chép số điện thoại": "复制电话号码",
   "Mở Zalo": "打开 Zalo",
   "Đã sao chép!": "已复制！",
-  "Số: 0876592763": "号码：0876592763"
+  "Số: 0876592763": "号码：0876592763",
+  "Mã QR Zalo của Nguyễn Thành Vinh": "阮成荣的 Zalo 二维码",
+  "Quét mã bằng app Zalo": "请用 Zalo 应用扫码"
 };

@@ -172,5 +172,7 @@ window.I18N_EN = {
   "Sao chép số điện thoại": "Copy phone number",
   "Mở Zalo": "Open Zalo",
   "Đã sao chép!": "Copied!",
-  "Số: 0876592763": "Number: 0876592763"
+  "Số: 0876592763": "Number: 0876592763",
+  "Mã QR Zalo của Nguyễn Thành Vinh": "Zalo QR code for Nguyen Thanh Vinh",
+  "Quét mã bằng app Zalo": "Scan with the Zalo app"
 };

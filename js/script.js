@@ -77,6 +77,27 @@
   if (!initial) { try { initial = localStorage.getItem("lang"); } catch (e) {} }
   if (initial && initial !== "vi" && DICTS[initial]) applyLang(initial); else labelShots();
 
+  // ===== Zalo menu: copy number =====
+  var copyBtn = document.getElementById("copyPhone");
+  var copyLabel = copyBtn.querySelector(".btn-label");
+  copyBtn.addEventListener("click", function () {
+    var done = function (msg) {
+      copyLabel.innerHTML = t(msg);
+      setTimeout(function () { copyLabel.innerHTML = t(copyLabel.dataset.vi); }, 2000);
+    };
+    // In-app browsers (Facebook, Zalo) often block the Clipboard API, so fall back to execCommand
+    var legacy = function () {
+      var ta = document.createElement("textarea");
+      ta.value = copyBtn.dataset.phone; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      copyBtn.parentNode.appendChild(ta); ta.select();
+      var ok = false; try { ok = document.execCommand("copy"); } catch (e) {}
+      ta.remove();
+      done(ok ? "Đã sao chép!" : "Số: 0876592763");
+    };
+    if (navigator.clipboard) navigator.clipboard.writeText(copyBtn.dataset.phone).then(function () { done("Đã sao chép!"); }, legacy);
+    else legacy();
+  });
+
   // ===== Lightbox: shows the full-resolution file already used by the tile =====
   var box = document.getElementById("lightbox");
   var boxImg = box.querySelector("img");

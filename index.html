@@ -6,7 +6,7 @@
 <title>Thành Vinh - Portfolio</title>
 <meta name="description" content="Portfolio của Nguyễn Thành Vinh: từ thiết kế thương hiệu đến truyền thông nội bộ, employer branding và tổ chức sự kiện tại Tinno Việt Nam.">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#B8F29B">
+<meta name="theme-color" content="#A8D8FF">
 <meta property="og:title" content="Thành Vinh - Portfolio">
 <meta property="og:description" content="Biến thông điệp doanh nghiệp thành trải nghiệm nhân viên.">
 <meta property="og:type" content="website">
@@ -16,12 +16,12 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://nthvinh4des.github.io/nthvinh4/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='6' fill='%23B8F29B' stroke='%23141414' stroke-width='3' transform='rotate(12 16 16)'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='4' width='24' height='24' rx='6' fill='%23A8D8FF' stroke='%23141414' stroke-width='3' transform='rotate(12 16 16)'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/portrait-cutout.webp" fetchpriority="high">
-<link rel="stylesheet" href="css/style.css?v=11">
+<link rel="stylesheet" href="css/style.css?v=12">
 <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -85,7 +85,7 @@
       <li class="stat rise"><span class="stat-num">600</span><span class="stat-label">CBNV tiếp cận qua kênh truyền thông nội bộ</span></li>
       <li class="stat stat-yellow rise" style="--d:60ms"><span class="stat-num">100+</span><span class="stat-label">ấn phẩm tuyển dụng, nội bộ và sự kiện</span></li>
       <li class="stat rise" style="--d:120ms"><span class="stat-num">50%</span><span class="stat-label">thời gian xử lý giảm nhờ công cụ web tự xây</span></li>
-      <li class="stat stat-green rise" style="--d:180ms"><span class="stat-num">3+</span><span class="stat-label">năm kinh nghiệm thiết kế và marketing</span></li>
+      <li class="stat stat-blue rise" style="--d:180ms"><span class="stat-num">3+</span><span class="stat-label">năm kinh nghiệm thiết kế và marketing</span></li>
     </ul>
   </section>
 
@@ -115,7 +115,7 @@
           <p class="step-org">Công ty Cổ phần IYC Việt Nam</p>
           <p>Thiết kế bao bì và ấn phẩm số cho 3 thương hiệu, quản lý POSM cho 5 điểm bán, làm visual cho 10 sự kiện nội bộ.</p>
         </li>
-        <li class="step step-green reveal" style="--d:160ms">
+        <li class="step step-blue reveal" style="--d:160ms">
           <span class="step-time">03.2026 - Hiện tại</span>
           <h3>Trợ lý Tuyển dụng</h3>
           <p class="step-org">Công ty TNHH Tinno Việt Nam</p>
@@ -378,7 +378,7 @@
       <h2 class="section-title reveal">Bước tiếp theo.</h2>
       <p class="section-lead reveal">Tôi muốn đi sâu vào hai mảng nơi thiết kế và con người gặp nhau.</p>
       <div class="dir-grid">
-        <article class="dir-card dir-green reveal">
+        <article class="dir-card dir-blue reveal">
           <h3>Tổ chức sự kiện &amp; hoạt động nội bộ</h3>
           <p>Từ Hội thao Tinno 2026 đến những chương trình gắn kết quy mô lớn hơn, nơi mỗi sự kiện là một điểm chạm văn hóa doanh nghiệp.</p>
           <ul class="tags"><li>Lên ý tưởng</li><li>Key visual</li><li>Vận hành</li><li>Truyền thông trước &amp; sau</li></ul>
@@ -450,7 +450,13 @@
         <p>Bạn cần một người kể chuyện văn hóa doanh nghiệp và tổ chức hoạt động nội bộ? Tôi sẵn sàng trao đổi, bằng tiếng Việt hoặc tiếng Trung.</p>
         <div class="contact-actions">
           <a href="mailto:nthvinh4@gmail.com" class="btn btn-yellow btn-lg">nthvinh4@gmail.com <span class="btn-arrow" aria-hidden="true">↗</span></a>
-          <a href="tel:+84876592763" class="btn btn-white btn-lg"><span class="btn-label">Zalo 0876 592 763</span></a>
+          <button type="button" class="btn btn-white btn-lg" popovertarget="zaloMenu"><span class="btn-label">Zalo 0876 592 763</span></button>
+        </div>
+        <div id="zaloMenu" class="zalo-menu" popover>
+          <p class="zalo-title">Zalo 0876 592 763</p>
+          <button type="button" class="btn btn-white" id="copyPhone" data-phone="0876592763"><span class="btn-label" aria-live="polite">Sao chép số điện thoại</span></button>
+          <a class="btn btn-yellow" href="https://zaloapp.com/qr/p/28wcwod925ps?src=qr" target="_blank" rel="noopener noreferrer"><span class="btn-label">Mở Zalo</span> <span class="btn-arrow" aria-hidden="true">↗</span><span class="sr-only">(mở trong tab mới)</span></a>
+          <button type="button" class="lightbox-close" popovertarget="zaloMenu" popovertargetaction="hide" aria-label="Đóng">✕</button>
         </div>
       </div>
     </div>
@@ -477,8 +483,8 @@
   <p class="lightbox-cap"></p>
 </dialog>
 
-<script src="js/i18n.js?v=4"></script>
-<script src="js/i18n-en.js?v=1"></script>
-<script src="js/script.js?v=6"></script>
+<script src="js/i18n.js?v=5"></script>
+<script src="js/i18n-en.js?v=2"></script>
+<script src="js/script.js?v=7"></script>
 </body>
 </html>

@@ -202,5 +202,9 @@ window.I18N_ZH = {
   "Bạn cần một người kể chuyện văn hóa doanh nghiệp và tổ chức hoạt động nội bộ? Tôi sẵn sàng trao đổi, bằng tiếng Việt hoặc tiếng Trung.": "需要一位懂得讲述企业文化、能策划内部活动的伙伴吗？欢迎用中文或越南语与我交流。",
   "Zalo 0876 592 763": "Zalo / 电话 0876 592 763",
   "<strong>Nguyễn Thành Vinh</strong> · Hải Phòng, Việt Nam": "<strong>阮成荣 Nguyễn Thành Vinh</strong> · 越南海防",
-  "© 2026 Nguyễn Thành Vinh": "© 2026 阮成荣"
+  "© 2026 Nguyễn Thành Vinh": "© 2026 阮成荣",
+  "Sao chép số điện thoại": "复制电话号码",
+  "Mở Zalo": "打开 Zalo",
+  "Đã sao chép!": "已复制！",
+  "Số: 0876592763": "号码：0876592763"
 };

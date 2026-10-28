@@ -168,5 +168,9 @@ window.I18N_EN = {
   "Hãy kết nối.": "Let's connect.",
   "Bạn cần một người kể chuyện văn hóa doanh nghiệp và tổ chức hoạt động nội bộ? Tôi sẵn sàng trao đổi, bằng tiếng Việt hoặc tiếng Trung.": "Need someone to tell your company culture story and run internal activities? I'm happy to talk, in Vietnamese or Chinese.",
   "<strong>Nguyễn Thành Vinh</strong> · Hải Phòng, Việt Nam": "<strong>Nguyen Thanh Vinh</strong> · Hai Phong, Vietnam",
-  "© 2026 Nguyễn Thành Vinh": "© 2026 Nguyen Thanh Vinh"
+  "© 2026 Nguyễn Thành Vinh": "© 2026 Nguyen Thanh Vinh",
+  "Sao chép số điện thoại": "Copy phone number",
+  "Mở Zalo": "Open Zalo",
+  "Đã sao chép!": "Copied!",
+  "Số: 0876592763": "Number: 0876592763"
 };
